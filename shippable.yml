@@ -1,0 +1,11 @@
+language: java
+
+jdk:
+  - oraclejdk8
+
+build:
+  ci:
+    - mvn -B clean package
+
+  post_ci:
+    - java -cp target/helloworld-1.0-SNAPSHOT.jar com.mycompany.app.App
