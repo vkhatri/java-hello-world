@@ -1,0 +1,7 @@
+language: java
+jdk:
+  - oraclejdk8
+
+script:
+  - mvn -B clean package
+  - java -cp target/helloworld-1.0-SNAPSHOT.jar com.mycompany.app.App
